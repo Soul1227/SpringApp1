@@ -56,10 +56,42 @@
 <div class="card">
     <h1>Detalles del empleado</h1>
     <ul>
-        <li><strong>Nombre:</strong> <span th:text="${empleado.nombre ?: none}"></span></li>
+        <li><strong>Nombre:</strong> <span th:text="${empleado.nombre ?: 'No tienen nombre'}" ></span></li>
         <li><strong>Apellidos:</strong> <span th:text="${empleado.apellidos ?: none}"></span></li>
         <li><strong>Edad:</strong> <span th:text="${empleado.edad ?: none}"></span></li>
     </ul>
+
+    <table>
+        <caption>Información de Empleados</caption>
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
+            <th>Puesto</th>
+            <th>Edad</th>
+            <th>teléfono</th>
+            <th>ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="Empleado : ${Empleados}">
+            <td th:text="${Empleado.nombre ?: N/A}"></td>
+            <td th:text="${Empleado.apellidos ?: N/A}"></td>
+            <td th:text="${Empleado.direccion ?: N/A}"></td>
+            <td th:text="${Empleado.puesto ?: N/A}"></td>
+            <td th:text="${Empleado.edad ?: N/A}"></td>
+            <td th:text="${Empleado.telefono ?: N/A}"></td>
+            <td th:text="${Empleado.id ?: N/A}"></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="6">Total de empleados:</td>
+            <td th:text="${Empleados.size()}"></td>
+        </tr>
+        </tfoot>
+    </table>
 </div>
 </body>
 </html>
