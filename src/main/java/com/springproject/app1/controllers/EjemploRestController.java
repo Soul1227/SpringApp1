@@ -4,6 +4,7 @@ import com.springproject.app1.models.DTOs.EmpleadosDTO;
 import com.springproject.app1.models.Empleados;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -20,5 +21,10 @@ public class EjemploRestController {
         Map<String, Object> map = new HashMap<>();
         map.put("empleado",empleadoDTO);
         return map;
+    }
+
+    @GetMapping("/ejemplo")
+    public String buscarProducto(@RequestParam String nombre){
+        return "Buscando " + nombre;
     }
 }
