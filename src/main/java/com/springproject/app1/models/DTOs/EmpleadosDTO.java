@@ -2,12 +2,13 @@ package com.springproject.app1.models.DTOs;
 
 public class EmpleadosDTO {
     private String nombre, apellidos;
-    private int edad;
+    private int edad, id;
 
-    public EmpleadosDTO(String nombre, String apellidos, int edad) {
+    public EmpleadosDTO(String nombre, String apellidos, int edad, int id) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
+        this.id= id;
     }
 
     public String getNombre() {
@@ -32,5 +33,13 @@ public class EmpleadosDTO {
 
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

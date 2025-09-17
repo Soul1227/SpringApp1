@@ -17,7 +17,7 @@ public class EjemploController {
     public String info(Model model) {
 
         //Empleados empleado = new Empleados("Paco","Ruiz","Calle de la piruleta","Parado",40,659874123,1);
-        EmpleadosDTO empleado = new EmpleadosDTO(null, "Pollito", 25);
+        EmpleadosDTO empleado = new EmpleadosDTO(null, "Pollito", 25, 5);
         model.addAttribute("empleado", empleado);
 
         return "detalles_info";

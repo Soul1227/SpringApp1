@@ -17,7 +17,7 @@ public class EjemploRestController {
     @GetMapping("/info")
     public Map<String, Object> info(){
         //Empleados empleado = new Empleados("Paco","Ruiz","Calle de la piruleta","Parado",40,659874123,1);
-        EmpleadosDTO empleadoDTO = new EmpleadosDTO("Ruben", "Pollito",25);
+        EmpleadosDTO empleadoDTO = new EmpleadosDTO("Ruben", "Pollito",25, 6);
         Map<String, Object> map = new HashMap<>();
         map.put("empleado",empleadoDTO);
         return map;
